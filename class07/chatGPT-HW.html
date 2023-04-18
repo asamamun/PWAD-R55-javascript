@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        Sure, here are a few homework assignments related to JavaScript functions and arrays:
+<ul>
+<li>Write a function that takes an array of numbers as input and returns the sum of all the numbers in the array.</li>
+<li>Write a function that takes an array of strings as input and returns the longest string in the array.</li>
+<li>Write a function that takes an array of numbers as input and returns a new array containing only the even numbers from the original array.</li>
+<li>Write a function that takes an array of strings as input and returns a new array containing only the strings that start with the letter "A".</li>
+<li>Write a function that takes an array of numbers as input and returns the highest and lowest numbers in the array as an object with properties "highest" and "lowest".</li>
+</ul>
+These assignments should provide you with some practice using
+<script>
+    function createarr(a,b){
+        let arr = [];
+        for (let index = a; index <= b; index++) {
+            arr.push(index);            
+        }
+        return arr;
+    }
+    function sum(n) {
+        let total = 0;
+    //   console.log(n);
+    n.forEach(s => {
+        // total = total + s;
+        total += s;
+    }); 
+    alert("total is " + total) 
+    }
+//[1,2,3,4.......100]
+    sum(createarr(1,100))
+</script>
+</body>
+</html>

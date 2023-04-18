@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title> Text Box Math </title>
+    <script language="JavaScript">
+        alert(parseInt("2.2"));
+        alert(parseFloat("2.2"));
+        alert(Number("2.2"));
+        function addEmUp() {
+            var sum = Number(document.calc.aOne.value) + Number(document.calc.aTwo.value);
+            // var sum = parseFloat(document.calc.aOne.value) + parseFloat(document.calc.aTwo.value);
+            alert(sum);
+        }
+    </script>
+</head>
+
+<body bgcolor="#ffffaa">
+    <h4>Enter 2 numbers and press the Sum button.</h4>
+    <form name="calc">
+        <input name="aOne" type=text>
+        <P>
+            <input name="aTwo" type=text>
+        <P>
+            <input type=button value="Sum" onClick="addEmUp( )">
+    </form>
+</body>
+
+</html>

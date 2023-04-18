@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>create a fx inchToCm(value in inch). It will return cm. 1 inch = 2.54 cm</p>
+    <hr>
+    <form action="">
+        <label for="inch">Inch</label>
+        <input type="text" name="inch" id="inch">
+        <input type="button" value="Convert" onclick="inchToCm()">
+        <!-- <label for="" id="cm"></label> -->
+        <input type="text" id="cmTxt"> cm
+    </form>
+    <script>
+        function inchToCm(){
+            var i = document.querySelector("#inch").value;
+            var cm = i * 2.54;
+            // document.querySelector("#cm").innerHTML = cm
+            document.querySelector("#cmTxt").value = cm;
+            w = window.open("","","width=300,height=300");
+            w.document.write(cm);
+            // w.close();
+        }
+    </script>
+</body>
+</html>

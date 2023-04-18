@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body>
+    <table class="table table-hover">
+
+        <tbody id="result">
+
+        </tbody>
+        <thead>
+            <tr>
+                <th>decimal</th>
+                <th>binary</th>
+                <th>octal</th>
+                <th>hexadecimal</th>
+            </tr>
+        </thead>
+    </table>
+    <script>
+        let html = "";
+        for (let index = 0; index <= 10; index++) {
+            html = html +  `<tr>
+    <td>${index}</td>
+    <td>${index.toString(2)}</td>
+    <td>${index.toString(8)}</td>
+    <td>${index.toString(16)}</td>
+</tr>`; 
+console.log(html);
+// alert(html)           
+        }
+        document.querySelector("#result").innerHTML = html;
+    </script>
+</body>
+</html>

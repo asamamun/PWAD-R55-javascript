@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var students = [];
+        let n = prompt("how many students");
+        for (let index = 0; index < n ; index++) {
+            // students.push(prompt("student number: " + (index + 1)))            
+            students.push(prompt())            
+        }
+        
+        students.forEach(e => {
+            document.write(e + " ");
+        });
+        students.sort();
+        document.write("<hr>");
+        students.forEach(e => {
+            document.write(e + " ");
+        });
+    </script>
+</body>
+</html>

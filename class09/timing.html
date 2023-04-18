@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <title>Timing Methods</title>
+    <script language="JavaScript">
+        var cupUp = new Image();
+        cupUp.src = "../assets/images/cupaJava.jpg";
+        var cupDown = new Image();
+        cupDown.src = "../assets/images/cupajava_ulta.jpg";
+        var alpha; //This variable needs to be global
+        function interval() {
+            alpha = window.setInterval("document.cup.src=cupDown.src", 3000);
+        }
+        function timeOut() {
+            window.setTimeout("document.cup.src=cupUp.src", 5000);
+            window.clearInterval(alpha);
+        }
+    </script>
+</head>
+
+<body>
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%" align="Center">
+        <tr valign="Middle">
+            <td align="Center"><img name="cup" src="../assets/images/cupajava.jpg" alt="java" width="64" height="38">
+                <p>
+                    <a href="#" onClick="interval()">Interval</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#" onClick="timeOut()">Time Out</a>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

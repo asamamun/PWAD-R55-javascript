@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Untitled Document</title>
+<script language="JavaScript">
+function fixWin(){
+var winR=open("","idb", "width=450, height=250");
+//var s=winR.document;
+var fname=document.myForm.fname.value;
+winR.document.write('you have given: ' + fname );
+winR.document.close();
+}
+</script>
+
+</head>
+
+<body><form name="myForm">
+<h3>Open and Write to a new window</h3>
+First Name: <input type="text" size=30 name="fname"><br />
+<input type=button value="Write to new window" onClick="fixWin()">
+</form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var arr = new Array();
+        // var arr = [];
+        var tree = new Object();
+tree.size="Big and taller than Uncle Jim.";
+tree.shade="It keeps us cool in the summer";
+tree.fall="We make giant leaf pumpkins."
+
+var tree = {
+    size: "Big and taller than uncle Jim",
+    shade : "It keeps us cool in the summer",
+    fall : "We make giant leaf pumpkins"
+}
+var display =tree["size"] + "<br>";
+display +=tree["shade"] + "<br>"
+display +=tree["fall"]
+document.write(display);
+
+//prototype
+function Mall(stName,shop,product) {
+this.stName=stName;
+this.shop=shop;
+this.product=product;
+}
+// Mall("ABC Garments","123","shirt, pants, hats")
+//object of that prototype is bloomfield
+var Bloomfield= new Mall("Bloomy","Nuts and Lightning Bolts","Organic Electricity");
+console.log(Bloomfield.shop)
+    </script>
+</body>
+</html>

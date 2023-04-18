@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <pre>
+String length
+String slice()
+String substring()
+String substr()
+String replace()
+String replaceAll()
+String toUpperCase()
+String toLowerCase()
+String concat()
+String trim()
+String trimStart()
+String trimEnd()
+String padStart()
+String padEnd()
+String charAt()
+String charCodeAt()
+String split()
+        </pre>
+    </div>
+<script>
+    let name = "Islamic Development Bank";
+    //length
+    
+    console.log(name.length)
+    console.log(name[12])
+    //slice
+    console.log(name.slice(2,5))
+    //substring
+    console.log(name.substring(2,5))
+    //charAt
+    console.log(name.charAt(3))
+    //charCodeAt
+    console.log(name.charCodeAt(3))
+    console.log("______________")
+    let alphabates = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('');
+    // alphabates.forEach((a,i)=> console.log(i))
+    alphabates.forEach((a,i)=> {console.log(a + " : "+alphabates[i].charCodeAt(0))})
+    let idb = name.cancat("(IDB)")
+    //
+
+</script>
+</body>
+</html>

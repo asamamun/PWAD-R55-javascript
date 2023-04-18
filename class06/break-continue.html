@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>break exits from the loop</h1>
+    <h1>Continue skips from the current iteration</h1>
+    <script>
+        let n = prompt("Your number");
+        // console.log(..."islamic development bank");
+        for (let index = 0; index < 1000; index++) {
+            
+            if(index == n) {
+                // break;
+                continue;
+            }
+            document.write(index+ " ");          
+        }
+        alert("loop ends");
+    </script>
+    <hr>
+    <script>
+        for (let index = 1; index <= 100; index++) {
+            //if(index%2==0) document.write(index+ " ");
+            //
+            if(index%2=="0") continue;
+            document.write(index+ " "); 
+        }
+    </script>
+</body>
+</html>

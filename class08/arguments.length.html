@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    function testing(n,m){
+        //n is fx variable
+        let x = n;
+        console.log(testing.length)//2
+        console.log(arguments.length)//5
+    }
+    //calling
+    testing(7,4,8,9,0);
+</script>
+<hr>
+<script language="JavaScript">
+    function bogus(xx) {
+    //The 'xx' is the argument
+    var alpha=arguments.length;
+    var beta=bogus.length;
+    return alpha + " arguments, but should use " + beta + "argument/s."
+    //When the bogus.length run it returns 1 because it only has 1 argument.
+    }
+    document.write("This function uses " + bogus(3,4,5));
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>Window Control</title>
+    <script language="JavaScript">
+        function GetStanWin() {
+            open("sampWin.html", "sampWin1", "toolbar=no,resize=no,width=200,height=150")
+            // open("https://w3schools.com", "sampWin1", "toolbar=no,resize=no,width=200,height=150")
+            //width=640,height=460 recommended design size
+        }
+        function moveRel() {
+            moveBy(20, 20)
+        }
+        function moveAbs() {
+            moveTo(20, 20)
+        }
+        function shrink() {
+            resizeBy(15, 10)
+        }
+        function shrivel() {
+            resizeTo(400, 300);
+        }
+    </script>
+</head>
+
+<body bgcolor="white">
+    <center>
+        <p>
+        <h2>Window Control</h2>
+        <form>
+            <input type="button" name="openBut" value="Click to Open New Window" onclick="GetStanWin()">
+            <p>
+                <input type="button" name="mvbyBut" value="Click to move relative." onclick="moveRel()">
+            <p>
+                <input type="button" name="mvtoBut" value="Click to move absolute." onclick="moveAbs()">
+            <p>
+                <input type="button" name="shrinkBut" value="Click to change relative
+size." onclick="shrink()">
+            <p>
+                <input type="button" name="shrivelBut" value="Click to change
+absolute size." onclick="shrivel()">
+            <p>
+    </center>
+    </form>
+</body>
+
+</html>

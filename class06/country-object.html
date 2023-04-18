@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="country.js"></script>
+    <style>
+        div{ text-align: center;
+            width: 100px;
+            display: inline-block;
+            padding: 10px;
+            margin:10px; 
+            border: 2px solid gray;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <img src="https://flagcdn.com/48x36/bd.png" alt=""> -->
+    
+    <script>
+        // alert("ABC".toLowerCase())
+        for (const key in countryObj) {
+           document.write('<div><img src="https://flagcdn.com/48x36/'+key.toLowerCase()+'.png" alt=""><h3>'+countryObj[key]+'</h3></div>');
+        }
+    </script>
+    <hr>
+    <script>
+/*         for (const d of countryObj) {
+           console.log(d);
+        }
+        for (const iterator of object) {
+            
+        } */
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="country.js"></script>
+</head>
+<body>
+    <script>
+        console.log(country);
+        console.log(country.length);
+        console.log(country[0]);
+        console.log(country[country.length-1]);
+        country.push("Noakhali");//adds value to the last//set
+        console.log(country.length);
+        console.log(country[country.length-1]);
+        country.unshift("Mirpur");//adds value to the first//set
+        console.log(country.length);
+        console.log(country[0]);
+        console.log(country.pop());//Noakhali
+        console.log(country.pop());//Noakhali
+        console.log(country.shift());//Mirpur
+        console.log(country.shift());//Afghanistan
+        console.log(country.length);
+    </script>
+    <hr>
+    <script>
+        document.write(country.join(" ~~IDB~~<br>"));
+        var totalCountry = country.concat(["A","B","C"]);
+        console.log(totalCountry);
+        totalCountry.sort();
+        totalCountry.reverse();
+        console.log(totalCountry);
+    </script>
+</body>
+</html>

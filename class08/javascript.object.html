@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="object.js"></script>
+</head>
+<body>
+    <script>
+        function p(l){ 
+            console.log(l);
+            console.log(l.coords.latitude)
+            console.log(l.coords.longitude)
+        }
+        window.navigator.geolocation.getCurrentPosition(p);
+        // let a = 6;
+        let x = {
+            a:1,
+            b:"idb",
+            c:function(n){ return n*n;}
+        }
+        console.log(x.a);//property
+        console.log(x['a']);//property
+        console.log(x.b);//property
+        console.log(x.c(5));//methods
+        showProp(x);
+        showProp(console);
+        console.log("~~~~~~~~~~~~~~~~~~~~~~~")
+        showProp(window.screen.orientation);
+        console.log("~~~~~~~~~~~~~~~~~~~~~~~")
+        //showProp(window.navigator.geolocation.getCurrentPosition());
+        // console.table(window);
+        // console.log(window);
+
+
+    </script>
+</body>
+</html>

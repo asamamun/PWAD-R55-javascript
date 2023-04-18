@@ -1,0 +1,1 @@
+console.log(range(1,10));

@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>Checkboxes and Radio Buttons</title>
+    <style type="text/css">
+        body {
+            font-family: verdana;
+            font-size: 11pt;
+            background-color: 33ff66;
+            font-weight: bold
+        }
+
+        .fStyle {
+            color: 595959;
+            background-color: b3ffcc;
+        }
+    </style>
+    <script language="JavaScript">
+        function sortItOut(form) {
+            //alert(document.hardware.components.value)
+            var display = "Key Feature and Components \n\n";
+            var reviewer = new Object();
+            reviewer = document.hardware;
+            for (var counter = 0; counter < reviewer.length; counter++) {
+                if (reviewer.elements[counter].checked) {
+                    display += reviewer.elements[counter].value + " | ";
+                }
+            }
+            reviewer.showTime.value = display;
+        }
+    </script>
+</head>
+
+<body onLoad="document.hardware.reset( )">
+    <form name="hardware">
+        <div class="fStyle">Pick one of the following as the most
+            important:<br>
+            <ul>
+                <input type=radio name="components" value="Cost" checked=true>
+                Cost<br>
+                <input type=radio name="components" value="Reliability">
+                Reliability<br>
+                <input type=radio name="components" value="Reputation" onClick="alert('Reputation?')"> Reputation<br>
+                <input type=radio name="components" value="Ease of Use"> Ease
+                of use<p>
+            </ul>
+            Which of the following do you plan to purchase with your computer?
+            Check all that apply:<p>
+            <ul>
+                <input type=checkbox name="printer" value="Printer">
+                Printer<br>
+                <input type=checkbox name="disk" value="High Capacity Disk">
+                High Capacity Disk<br>
+                <input type=checkbox name="scan" value="Scanner" checked=true>
+                Scanner<br>
+                <input type=checkbox name="mem" value="Additional Memory">
+                Added Memory<p>
+        </div>
+        </ul>
+        <textarea cols=50 rows=8 name="showTime"></textArea>
+        <input type=button value=" Sort It Out " onClick="sortItOut(this.form)">
+    </form>
+</body>
+
+</html>

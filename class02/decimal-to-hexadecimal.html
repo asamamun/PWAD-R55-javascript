@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* h1{ background-color: ;} */
+    </style>
+</head>
+<body>
+    <form name="convert" id="myform">
+        <input type="text" id="r" name="dec1" size=3>
+        <input type="text" id="g" name="dec2" size=3>
+        <input type="text" id="b" name="dec3" size=3>
+        <input type="button" value="Convert" onclick="rgbToHexa()">
+        </form>
+        <div id="result"></div>
+        <script>
+            function rgbToHexa() {
+            let r = Number(document.querySelector("#r").value).toString(16);        
+            let g = Number(document.querySelector("#g").value).toString(16);
+            let b = Number(document.querySelector("#b").value).toString(16);
+            if(r.length == 1){ r = "0"+r;}
+            if(g.length == 1){ g = "0"+g;}
+            if(b.length == 1){ b = "0"+b;}
+              document.querySelector("#result").innerHTML = "#" + r + g + b;
+              document.querySelector("#result").style.backgroundColor = "#" + r + g + b;
+            }
+        </script>
+</body>
+</html>

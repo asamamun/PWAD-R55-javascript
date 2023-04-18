@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inch-to-cm</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center bg-info border border-success m-2 p-2 rounded">inch to cm converter</h1>
+        <form action="">
+            <div class="row">
+                <div class="col-5">
+                    inch
+                    <input type="text" placeholder="Enter inch" id="in">
+                </div>
+                <div class="col-2">
+                    <input type="button" value="convert now" class="btn btn-outline-info" onclick="forcm()">
+                </div>
+                <div class="col-5">
+                    cm 
+                    <input type="text" placeholder="cm" id="cm">
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <script>
+        function forcm(){
+            let i = Number(document.querySelector("#in").value);
+            let c = i*2.54;
+            document.querySelector("#cm").value = c;
+        }
+    </script>
+    
+</body>
+</html>

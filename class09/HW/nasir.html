@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Muhammad Nasir Uddin Khan Shawon" >
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css" />
+    <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main>
+      <section class="flex flex-col items-center justify-center my-6 min-w-full">
+        <div class="flex flex-col items-center justify-center gap-6 w-96 h-[700px] bg-gray-950 rounded-3xl relative p-4">
+          <div class="grid grid-cols-3 items-center justify-between gap-0 text-xs text-gray-400 absolute top-1">
+            <p class="flex gap-1.5">
+              <span class="font-bold mr-1">J.A.R.V.I.S</span>
+              <span>
+                <i class="fas fa-phone-missed"></i>
+              </span>
+              <span>
+                <i class="far fa-bell-slash"></i>
+              </span>
+              <span>
+                <i class="far fa-bluetooth"></i>
+              </span>
+            </p>
+            <p class="text-center">
+              <span>
+                <i class="fad fa-circle-dot"></i>
+              </span>
+            </p>
+            <p class="flex gap-1.5">
+              <span>
+                <i class="far fa-wifi"></i>
+              </span>
+              <span>
+                <i class="fas fa-signal-bars"></i>
+              </span>
+              <span>
+                <i class="far fa-battery-full"></i>
+              </span>
+              <span>
+                <span id="h"></span>
+                <span>:</span>
+                <span id="m"></span>
+                <span id="t"></span>
+              </span>
+            </p>
+          </div>
+          <div class="flex flex-col items-center justify-center gap-4 mt-10">
+            <div class="">
+              <div class="relative">
+                <input type="search" name="" class="block rounded-full p-1 w-80" id="" disabled />
+                <span class="absolute top-1 left-2">
+                  <i class="fas fa-search"></i>
+                </span>
+              </div>
+            </div>
+            <div class="flex flex-col items-center gap-1 text-center text-gray-400 font-clock">
+              <div class="flex items-center gap-1 text-5xl font-bold">
+                <span id="hours"></span>
+                <span class="text-3xl">
+                  <i class="far fa-colon"></i>
+                </span>
+                <span id="minutes"></span>
+                <span class="text-3xl">
+                  <i class="far fa-colon"></i>
+                </span>
+                <span id="seconds"></span>
+                <span id="time"></span>
+              </div>
+              <div class="flex items-center justify-between text-xl w-60">
+                <p id="day">Wednesday</p>
+                <p>
+                  <span id="date">09</span>
+                  <span>/</span>
+                  <span id="month">04</span>
+                  <span>/</span>
+                  <span id="year">2023</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <img src="./assets/images/jarvis.png" class="opacity-50 w-80" alt="" />
+          <div class="flex flex-col items-center justify-center gap-8">
+            <div class="flex items-center justify-between gap-6">
+              <a href="https://www.instagram.com/shawonk9999" class="text-2xl text-center text-gray-400 border-2 border-gray-400 rounded-full p-1.5 w-12 h-12" target="_blank" >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.twitter.com/shawonk9999" class="text-2xl text-center text-gray-400 border-2 border-gray-400 rounded-full p-1.5 w-12 h-12" target="_blank" >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.facebook.com/shawonkhan.cupid" class="text-2xl text-center text-gray-400 border-2 border-gray-400 rounded-full p-1.5 w-12 h-12" target="_blank" >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/shawonkhan007" class="text-2xl text-center text-gray-400 border-2 border-gray-400 rounded-full p-1.5 w-12 h-12" target="_blank" >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://www.github.com/Iamcupid" class="text-2xl text-center text-gray-400 border-2 border-gray-400 rounded-full p-1.5 w-12 h-12" target="_blank" >
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <ul class="flex items-center justify-between text-2xl text-gray-600 gap-20 w-60">
+              <button class="-rotate-90" disabled >
+                <i class="far fa-triangle"></i>
+              </button>
+              <button disabled >
+                <i class="far fa-circle"></i>
+              </button>
+              <button disabled >
+                <i class="far fa-square"></i>
+              </button>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--  -->
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            clock: ['Seven Segment', 'sans-serif'],
+          },
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        }
+      }
+    </script>
+    <script>
+      function digitalClock() {
+        const now = new Date();
+        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let h = now.getHours();
+        let amOrPm = h < 12 ? "AM" : "PM";
+        document.getElementById("h").innerHTML = ((h + 11) % 12 + 1).toString().padStart(2, "0");
+        document.getElementById("m").innerHTML = now.getMinutes().toString().padStart(2, "0");
+        document.getElementById("t").innerHTML = amOrPm;
+        document.getElementById("hours").innerHTML = ((h + 11) % 12 + 1).toString().padStart(2, "0");
+        document.getElementById("minutes").innerHTML = now.getMinutes().toString().padStart(2, "0");
+        document.getElementById("seconds").innerHTML = now.getSeconds().toString().padStart(2, "0");
+        document.getElementById("time").innerHTML = amOrPm;
+        document.getElementById("day").innerHTML = daysOfWeek[now.getDay()];
+        document.getElementById("date").innerHTML = now.getDate().toString().padStart(2, "0");
+        document.getElementById("month").innerHTML = (now.getMonth() + 1).toString().padStart(2, "0");
+        document.getElementById("year").innerHTML = now.getFullYear();
+      }
+      setInterval(digitalClock, 1);
+    </script>
+  </body>
+</html>

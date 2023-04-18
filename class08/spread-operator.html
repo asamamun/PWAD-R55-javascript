@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function hobbies(h,x,y){
+            console.log(h);
+            console.log(x);
+            console.log(y);
+            console.log(arguments.length)
+        }
+        hobbies("reading");
+        console.log("__________")
+        hobbies("reading","writing","cycling");
+
+
+    </script>
+    <hr>
+    <script>
+        //spread operator
+/*         function myhobby(u,...h){
+            console.log(u);
+            console.log(h);
+        } */
+        let myhobby = function(u,...h){
+            console.log(u);
+            console.log(h);
+        }
+        myhobby("rahim","reading","writing","cycling");
+        myhobby("rahima","reading","writing","cycling","travelling","cooking","facebooking","tiktoking");
+        console.log(myhobby)//returns function
+        console.log(myhobby())//returns function and executes the function
+    </script>
+</body>
+</html>

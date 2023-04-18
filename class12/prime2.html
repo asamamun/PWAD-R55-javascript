@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function isPrime(num) {
+        if (num <= 1) return false; // 1 is not a prime number
+        if (num === 2) return true; // 2 is a prime number
+        if (num % 2 === 0) return false; // other even numbers are not prime
+        for (let i = 3; i <= Math.sqrt(num); i += 2) {
+          if (num % i === 0) return false;
+        }
+        return true;
+      }
+      
+      const table = document.createElement("table");
+      const tbody = document.createElement("tbody");
+      
+      for (let i = 1; i <= 1000; i++) {
+        const row = document.createElement("tr");
+        const cell1 = document.createElement("td");
+        const cell2 = document.createElement("td");
+        cell1.textContent = i;
+        cell2.textContent = isPrime(i) ? "Prime" : "Not Prime";
+        cell2.style.color = isPrime(i) ? "green" : "red"; // Highlight not prime cells in red
+        row.appendChild(cell1);
+        row.appendChild(cell2);
+        tbody.appendChild(row);
+      }
+      
+      table.appendChild(tbody);
+      document.body.appendChild(table);
+    </script>
+</body>
+</html>

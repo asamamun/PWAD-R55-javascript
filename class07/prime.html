@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var d = null;
+        function isPrime(n){
+                let res = true;
+                
+            for (let index = 2; index < n; index++) {
+                if(n%index == 0){ res = false;d = index;break;}                
+            }
+             return res;
+        }
+        if(isPrime(prompt())){ alert("Prime")}
+        else{ alert("Not Prime." + "Can be divided by " + d);}
+    </script>
+</body>
+</html>

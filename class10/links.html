@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol><li>CIA World Factbook: <a href="https://www.cia.gov/the-world-factbook/" target="_new">https://www.cia.gov/the-world-factbook/</a></li><li>United Nations: <a href="https://www.un.org/en/member-states/index.html" target="_new">https://www.un.org/en/member-states/index.html</a></li><li>World Bank: <a href="https://data.worldbank.org/country" target="_new">https://data.worldbank.org/country</a></li><li>Worldometers: <a href="https://www.worldometers.info/geography/how-many-countries-are-in-the-world/" target="_new">https://www.worldometers.info/geography/how-many-countries-are-in-the-world/</a></li><li>Britannica: <a href="https://www.britannica.com/topic/list-of-countries-1993160" target="_new">https://www.britannica.com/topic/list-of-countries-1993160</a></li><li>National Geographic: <a href="https://www.nationalgeographic.org/maps/countries-world/" target="_new">https://www.nationalgeographic.org/maps/countries-world/</a></li><li>Lonely Planet: <a href="https://www.lonelyplanet.com/places" target="_new">https://www.lonelyplanet.com/places</a></li><li>The Economist: <a href="https://www.economist.com/countries" target="_new">https://www.economist.com/countries</a></li><li>CountryReports: <a href="https://www.countryreports.org/" target="_new">https://www.countryreports.org/</a></li><li>World Atlas: <a href="https://www.worldatlas.com/countries.htm" target="_new">https://www.worldatlas.com/countries.htm</a></li></ol>
+    <script>
+        console.log(document.getElementsByTagName("a").length);
+        // console.log(document.querySelector("a").length);
+        let allas = document.getElementsByTagName("a");
+
+        console.log(allas[7])
+        console.log(allas[7].getAttribute("href"))
+        for (let index = 0; index < allas.length; index++) {
+            document.write("<li>"+ allas[index].getAttribute("href") + "</li>");            
+        }
+    </script>
+    <noscript>
+        your browser does not support javascript
+    </noscript>
+</body>
+</html>

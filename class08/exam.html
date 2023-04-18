@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="history.back()">go back</button>
+    <button onclick="goog()">go to google </button>
+    <p>http://localhost/R55/JavaScript/class08/exam.html?enum.condition=new&money.price.minimum=10000&money.price.maximum=20000&enum.authenticity=original&tree.brand=samsung#ch1</p>
+    <ul>
+        <li>screen</li>
+        <li>location</li>
+        <li>history</li>
+        <li>navigator</li>
+    </ul>
+    <script>
+        console.log(navigator)
+        console.log(history)
+        console.log(location)
+        console.log(location.search)
+        console.log(location.hash)
+
+        function goog(){
+            window.location = "https://www.google.com"
+        }
+    </script>
+</body>
+</html>

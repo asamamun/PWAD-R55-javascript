@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        fetch('https://dummyjson.com/products')
+            .then(res => res.json())
+            .then(d => showdata(d));
+
+            function showdata(d) {
+                console.log(d);
+                for (const key in d) {
+                  // console.log(key); 
+                  console.log(d[key]);
+                }
+            }
+    </script>
+</body>
+</html>

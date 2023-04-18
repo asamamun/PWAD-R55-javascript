@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="JavaScript">
+        function fixWin(){
+        var winR=open("","ralph", "scrollbars=0, width=200, height=100,     resizable=no")
+        var s=winR.document;
+        // var message=document.forms[0].george.value;
+        // var message=document.getElementById("george").value;
+        var message=document.querySelector("#george").value;
+        s.write('<body bgcolor="hotpink">');
+        s.write('<h4>');
+        s.write("Name" + message);
+        s.write('</h4>');
+        s.write('</body>');
+        s.close();
+        }
+        </script>
+</head>
+<body>
+    <form>
+        <h3>Open and Write to a new window</h3>
+        <input type="text" size=30 name="george" id="george">
+        <input type="password" size=30 name="pass" id="pass">
+        <p>
+        <input type=button value="Write to new window" onclick="fixWin()">
+        </form>
+</body>
+</html>

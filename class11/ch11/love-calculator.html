@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <style type="text/css">
+        body {
+            font-family: verdana;
+            font-size: 11pt;
+            color: red;
+            background-color: #ffb7d0;
+            font-weight: bold;
+    </style>
+    <title>Image Form Element</title>
+    <script language="Javascript">
+        function lovesMe() {
+            var cupid = Math.random();
+            console.log(cupid);
+            cupid = Math.floor(cupid * 100);
+            var throb = "";
+            if (cupid > 50) {
+                throb = "He loves me!"
+                //Change the gender pronoun to your preferences
+            } else {
+                throb = "He loves me not...."
+            }
+            alert(throb);
+        }
+    </script>
+
+<body>
+    <center>
+        <form name="heart">
+            Name1 <input type="text">
+            Name2 <input type="text">
+            Click the heart five times to learn how he feels about you! <p>
+                <input type=image src="../../assets/images/heart-removebg-preview.png" name="ache" onClick="lovesMe( );"
+                    border=0>
+            <p>
+                If the answer is incorrect, click the button five more times....
+        </form>
+    </center>
+</body>
+
+</html>

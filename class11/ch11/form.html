@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="alpha">
+        <input type=text name="beta" id="beta">
+        <input type=email name="em">
+        <input type="button" value="test" onclick="test()">
+    </form>
+    <hr>
+    <form name="gamma">
+        <input type=text name="beta">
+        <input type=text name="beta2">
+        <input type=text name="beta3">
+        <input type=email name="em">
+        <input type="button" value="test2" onclick="test2()">
+    </form>
+    <script>
+        function test() {
+            // console.log(document.alpha.beta.value);
+            console.log(document.forms[0].elements[0].value);
+            console.log(document.alpha.beta.value);
+            console.log(document.getElementById("beta").value);
+            // console.log(document.forms[1].elements[1].value);
+            // console.log(document.forms[1].elements[2].value);
+        }
+        function test2() {
+            console.log(document.forms[1].length)
+            // console.log(document.alpha.beta.value);
+            console.log(document.forms[0].elements[0].value);
+            console.log(document.forms[0].elements[1].value);
+            console.log(document.forms[0].elements[2].value);
+        }
+    </script>
+</body>
+
+</html>

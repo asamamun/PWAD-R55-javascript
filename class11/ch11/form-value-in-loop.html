@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Enter the information:</h3>
+    <form name="enter">
+        <table border="0" cellpadding="3" cellspacing="0" height="78" width="auto" bgcolor="#8e58ad">
+            <tr>
+                <td colspan="2"><input name="fName" type=text><span class="inBox">&nbsp;&nbsp;First Name</span>
+                </td>
+                <td colspan="2"><input name="lNamename" type=text><span class="inBox">&nbsp;&nbsp; Last
+                        Name</span></td>
+            </tr>
+            <tr>
+                <td><input name="address" type=text><span class="inBox">&nbsp;&nbsp;
+                        Address</span></td>
+                <td><input name="city" type=text><span class="inBox">&nbsp;&nbsp;City</span> </td>
+                <td><input name="state" size=2 type=text><span class="inBox">&nbsp;&nbsp;State</span></td>
+                <td><input name="zip" size=6 type=text><span class="inBox">&nbsp;&nbsp; Zip Code</span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4"><input name="email" type=text><span class="inBox">&nbsp;&nbsp;Email</span> </td>
+            </tr>
+        </table>
+    </form>
+    <form name="transfer">
+        <input type=button value="Transfer Array" onClick="sendEm()">
+        <p>
+            <textarea rows=8 cols=80 name="gather"></textarea>
+    </form>
+
+    <script>
+        function sendEm(){
+        var newDisplay="";
+        let myForm = document.enter.length;
+        for (var counter = 0; counter < myForm; counter++) {
+            newDisplay += document.forms[0].elements[counter].value + "\n";
+        }
+        document.forms[1].elements[1].value = newDisplay;
+        //transfer the value in new window
+        let w = open("","","width=400,height=400");
+        w.document.write(newDisplay);
+        w.document.close();
+    }
+    </script>
+</body>
+
+</html>

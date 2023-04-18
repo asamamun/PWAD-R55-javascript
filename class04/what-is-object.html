@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" media="all">
+    <link rel="stylesheet" href="print.css" media="print">
+</head>
+<body>
+    <button id="pBtn" onclick="printpage()">Print page</button>
+    <hr>
+    <script>
+        //scalar data type: string,number,boolean,null,undefined
+        //compound data type: array, object
+        // var me = new Object();
+        var hobby = ["reading", "writing", "facenooking", "ticktoking"];
+        var me = {
+            name: "IDB",
+            bg: "B+",
+            height: 12,
+            weight: 56,
+            married: false,
+            fname: "ABC",
+            dob : "12-12-2000",
+            hobbies:hobby
+        };
+        var shopCart = { 
+            item: 5.95, 
+            tax: .07 , 
+            shipping: 14.95 
+        };
+        document.write(me.dob);
+        console.log(typeof me);
+        console.log(me);
+        console.log(me.bg);
+        function printpage(){
+            window.print();
+        }
+        
+    </script>
+</body>
+</html>

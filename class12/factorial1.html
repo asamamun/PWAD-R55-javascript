@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" pattern="[0-9]"> -->
+    <input type="number" id="n">
+    <button onclick="fact()">Calculate Factorial</button>
+    <h3 id="result"></h3>
+    <script>
+        //5 = 1*2*3*4*5
+        function fact(){
+            let result = 1;
+            let n = document.getElementById("n").value;
+            for (let index = 1; index <= n; index++) {
+                // result = result * index;                
+                result *= index;                
+            }
+            document.getElementById("result").innerHTML = result;
+
+        }
+    </script>
+</body>
+</html>

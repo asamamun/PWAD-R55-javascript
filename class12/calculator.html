@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <style>
+        .calculator{
+            
+            margin: 0 auto;
+            margin-top: 100px;
+            width: 350px;
+            border: 2px solid gray;
+            padding: 10px;
+        }
+        .col-3 .btn{
+            width:100%;
+        }
+        #display{
+            text-align: right;
+            padding: 5px;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div id="result">
+                <input id="display" type="text" class="form-control">
+            </div>
+            <div class="row">
+                <div class="col-2"> <button class="btn btn-light">MC</button> </div>
+                <div class="col-2"> <button class="btn btn-light">MR</button> </div>
+                <div class="col-2"> <button class="btn btn-light">M+</button> </div>
+                <div class="col-2"> <button class="btn btn-light">M-</button> </div>
+                <div class="col-2"> <button class="btn btn-light">MS</button> </div>
+                <div class="col-2"> <button class="btn btn-light">M</button> </div>
+                
+            </div>
+            <div class="row mb-2">
+                <div class="col-3"> <button class="btn btn-secondary">%</button> </div>
+                <div class="col-3"> <button class="btn btn-secondary">CE</button> </div>
+                <div class="col-3"> <button class="btn btn-secondary" onclick="calc('clear')">C</button> </div>
+                <div class="col-3"> <button  onclick="calc('back')" class="btn btn-secondary">back</button> </div>
+            </div>
+            <div class="row  mb-2">
+                <div class="col-3"> <button class="btn btn-secondary" onclick="calc('reverse')">1/x</button> </div>
+                <div class="col-3"> <button class="btn btn-secondary" onclick="calc('sq')">x<sup>2</sup></button> </div>
+                <div class="col-3"> <button class="btn btn-secondary" onclick="calc('radic')">&radic;</button> </div>
+                <div class="col-3"> <button class="btn btn-secondary" onclick="calc('/')"> / </button> </div>
+            </div>
+            <div class="row  mb-2">
+                <div class="col-3"> <button class="btn btn-secondary" onclick="calc('7')">7</button> </div>
+                <div class="col-3"> <button class="btn btn-secondary" onclick="calc('8')">8</button> </div>
+                <div class="col-3"> <button class="btn btn-secondary" onclick="calc('9')">9</button> </div>
+                <div class="col-3"> <button class="btn btn-secondary" onclick="calc('*')">X</button> </div>
+            </div>
+            <div class="row  mb-2">
+                <div class="col-3"> <button class="btn btn-secondary" onclick="calc('4')">4</button> </div>
+                <div class="col-3"> <button class="btn btn-secondary" onclick="calc('5')">5</button> </div>
+                <div class="col-3"> <button class="btn btn-secondary" onclick="calc('6')">6</button> </div>
+                <div class="col-3"> <button class="btn btn-secondary" onclick="calc('-')">-</button> </div>
+            </div>
+            <div class="row  mb-2">
+                <div class="col-3"> <button class="btn btn-secondary" onclick="calc('1')">1</button> </div>
+                <div class="col-3"> <button class="btn btn-secondary"  onclick="calc('2')">2</button> </div>
+                <div class="col-3"> <button class="btn btn-secondary"  onclick="calc('3')">3</button> </div>
+                <div class="col-3"> <button class="btn btn-secondary"  onclick="calc('+')">+</button> </div>
+            </div>
+            <div class="row  mb-2">
+                <div class="col-3"> <button class="btn btn-secondary" onclick="calc('changesign')">+/-</button> </div>
+                <div class="col-3"> <button class="btn btn-secondary" onclick="calc('0')">0</button> </div>
+                <div class="col-3"> <button class="btn btn-secondary" onclick="calc('.')">.</button> </div>
+                <div class="col-3"> <button class="btn btn-primary" onclick="calc('=')">=</button> </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        function calc(n){
+           // console.log(n)
+           if(n =="reverse"){
+            let d = document.getElementById("display").value;
+            document.getElementById("display").value = 1/d;
+           }
+           else if(n=="radic"){
+            let d = document.getElementById("display").value;
+            document.getElementById("display").value = Math.sqrt(d);
+           }
+           else if(n=="sq"){
+            let d = document.getElementById("display").value;
+            document.getElementById("display").value = Math.pow(d,2);
+           }
+           else if(n=="changesign"){
+            let d = document.getElementById("display").value;
+            if(d[0]=="-"){
+                document.getElementById("display").value = d.substring(1,d.length); 
+            }
+            else{
+                document.getElementById("display").value = "-"+d;
+            }
+           }
+           else if(n=="back"){
+            let d = document.getElementById("display").value;
+            if(d.length > 0){
+                document.getElementById("display").value = d.substring(0,d.length-1);   
+            }
+            else{
+                document.getElementById("display").setAttribute("placeholder","0");
+            }
+           }
+           else if(n=="="){
+            
+            document.getElementById("display").value = eval(document.getElementById("display").value);
+           }
+           else if(n=="clear"){
+            document.getElementById("display").value="";
+            document.getElementById("display").setAttribute("placeholder","0");
+           }
+           else{
+            document.getElementById("display").value += n;
+           }
+           
+           console.log(document.getElementById("display").value)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Change Different Window</title>
+<script language="JavaScript">
+function fiWin(){
+ var winR=open("","ralph", "scrollbars=0, width=200, height=100,resizable=no")
+ var s=winR.document;
+//  var message=document.forms[0].george.value;
+ var message=document.querySelector("#gorge").value;
+ s.write('<body bgcolor="hotpink">');
+ s.write('<h4>');
+ s.write(message);
+ s.write("</h4>");
+ s.write("</body>");
+ s.close();
+ }
+</script>
+</head>
+<body>
+
+<form>
+<h3>Open and Write to a new window</h3>
+<input type="text" size=30 name="george" id="gorge">
+<input type=button value="Write to new window" onclick="fiWin()" >
+</form>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <table class="table table-striped table-hover">
+            <tr>
+                <th>Number</th>
+                <th>Factorial Value</th>
+            </tr>
+            <tbody id="fc">
+
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function fact(n) {
+            let f = 1;
+            for (let index = 1; index <= n; index++) {
+                f = f * index;
+            }
+            return f;
+        }
+
+        let html = "";
+        for (let index = 0; index < 50; index++) {
+            html += `<tr>
+    <td>${index}</td>
+    <td>${fact(index)}</td>
+</tr>`;
+        }
+        document.querySelector("#fc").innerHTML = html;
+    //print()
+    </script>
+</body>
+
+</html>

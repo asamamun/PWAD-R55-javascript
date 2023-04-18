@@ -1,0 +1,59 @@
+1. Write down some features of JavaScript?
+ Java Script is a high-level interpreted language.
+ JavaScript can be embedded directly into HTML pages.
+ It is a lightweight programming language.
+ JavaScript is primarily used in the form of client-side.
+ JavaScript is dynamic, weakly typed and has first-class functions
+
+2. Why JavaScript is called weakly type language?
+In JavaScript, type casting is not necessary to convert one data type to another data type. That means the variable containing numeric data can also contain string data without any cast and no need to declare variable data type. For these reason JavaScript is called loosely/weakly type language.
+
+3. What do you understand by Undefined and null values?
+Undefined value means a variable has been declared but has not yet been assigned a value.
+On the other hand, null is an assignment value. It is not zero, not blank or not undefined. It can be assigned to a variable as a representation of no value. Also, undefined and null are two distinct types: undefined is a type itself (undefined) while null is an object.
+Var noVal=null;document. write (noVal);
+
+4. What do you mean by local variable and global variable?
+Local variable: These variables only exist inside the specific function that creates them. They are
+unknown to other functions and to the main program.
+Global variable: A local variable has global scope which means it is defined everywhere in your
+JavaScript code. They do not get recreated if the function is recalled.
+Example- var a=5;
+function test() {var b=”abc”; var c=a+b;}
+Here “a” is global variable and “b”, ”c” are local variable
+
+5. What are the three basic structure of JavaScript?
+Three basic structure of java Script are:
+a) Sequence - placed in sequence order.
+b) Branches – execute alternative condition.
+c) Loops –it repeat a statement.
+
+6. What are the three categories of operators?
+Unary, Binary, Ternary
+
+7. What is Document Object Model (DOM)?
+The Document Object Model (DOM) is the model that describes how all elements in an HTML page,
+like input fields, images, paragraphs etc., are related to the topmost structure: the document itself. By calling the element by its proper DOM name, we can influence it.
+
+
+8. What is difference between setInterval () and settimeout ()?
+SetInterval: The SetInterval () method in JavaScript repeats a script action every many milliseconds, initiating the script after the specified number of millisecond.
+SetTimeout: The SetTimeout () method in JavaScript is a simple function used to repeatedly call some
+function after a specified amount of time.
+
+
+9. What is the function of break and continue statement?
+The break statement will break the loop and continue executing the code that follows after the loop (if any). The continue statement will break the current loop and continue with the next value.
+
+
+10. What is the difference between “==” and “===” operator?
+Equal operator (==) check the condition whether two numbers or string values are equal
+Strictly equal operator (===) used to compare and check whether both values and their types are
+equal.
+
+11. What do you mean by cookies?
+A cookie is a variable that is stored on the visitor's computer. 
+
+
+12. What do you mean by object? Name 3 built in objects in JavaScript?
+An object is a collection of properties or variable and methods. Objects may be user define or built in.Some built in objects are Math, Date, Window, History, Location, Navigator, Array, String etc.

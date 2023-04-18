@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tag -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Muhammad Nasir Uddin Khan Shawon" />
+    <!-- Web Page Title -->
+    <title>HW-01 | JavaScript</title>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="./plugins/font-awesome/css/all.min.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./plugins/bootstrap/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <h1 class="text-center">Unit Converter</h1>
+      </section>
+      <section class="container">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
+            <div class="card mt-1 mb-4">
+              <div class="card-header">
+                <h3 class="card-title">Tempareture</h3>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="">Fahrenheit Value</label>
+                  <div class="input-group mt-2">
+                    <input type="number" class="form-control" id="fahrenheit" placeholder="Enter Value Here" />
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <h5 class="mb-3">Your Result</h5>
+                  <p class="">
+                    <b>Method-01 :</b>
+                    <span id="tempOne"></span>
+                  </p>
+                  <p class="">
+                    <b>Method-02 :</b>
+                    <span id="tempTwo"></span>
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer d-grid">
+                <button onclick="convertOne()" class="btn btn-outline-primary" >Calculate</button>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
+            <div class="card mt-1 mb-4">
+              <div class="card-header">
+                <h3 class="card-title">Length-01</h3>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="kilometer">Kilometer Value</label>
+                  <div class="input-group mt-2">
+                    <input type="number" class="form-control" id="kilometer" placeholder="Enter Value Here" />
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <h5 class="mb-3">Your Result</h5>
+                  <p class="">
+                    <b>Method-01 :</b>
+                    <span id="lengthOne1"></span>
+                  </p>
+                  <p class="">
+                    <b>Method-02 :</b>
+                    <span id="lengthOne2"></span>
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer d-grid">
+                <button onclick="convertTwo()" class="btn btn-outline-primary" >Calculate</button>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
+            <div class="card mt-1 mb-4">
+              <div class="card-header">
+                <h3 class="card-title">Length-02</h3>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="yard">Yard Value</label>
+                  <div class="input-group mt-2">
+                    <input type="number" class="form-control" id="yard" placeholder="Enter Value Here" />
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <h5 class="mb-3">Your Result</h5>
+                  <p class="">
+                    <b>Method-01 :</b>
+                    <span id="lengthTwo1"></span>
+                  </p>
+                  <p class="">
+                    <b>Method-02 :</b>
+                    <span id="lengthTwo2"></span>
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer d-grid">
+                <button onclick="convertThree()" class="btn btn-outline-primary" >Calculate</button>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
+            <div class="card mt-1 mb-4">
+              <div class="card-header">
+                <h3 class="card-title">Length-03</h3>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="foot">Foot Value</label>
+                  <div class="input-group mt-2">
+                    <input type="number" class="form-control" id="foot" placeholder="Enter Value Here" />
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <h5 class="mb-3">Your Result</h5>
+                  <p class="">
+                    <b>Method-01 :</b>
+                    <span id="lengthThree1"></span>
+                  </p>
+                  <p class="">
+                    <b>Method-02 :</b>
+                    <span id="lengthThree2"></span>
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer d-grid">
+                <button onclick="convertFour()" class="btn btn-outline-primary" >Calculate</button>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
+            <div class="card mt-1 mb-4">
+              <div class="card-header">
+                <h3 class="card-title">Mass</h3>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="kilogram">Kilogram Value</label>
+                  <div class="input-group mt-2">
+                    <input type="number" class="form-control" id="kilogram" placeholder="Enter Value Here" />
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <h5 class="mb-3">Your Result</h5>
+                  <p class="">
+                    <b>Method-01 :</b>
+                    <span id="massOne"></span>
+                  </p>
+                  <p class="">
+                    <b>Method-02 :</b>
+                    <span id="massTwo"></span>
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer d-grid">
+                <button onclick="convertFive()" class="btn btn-outline-primary" >Calculate</button>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
+            <div class="card mt-1 mb-4">
+              <div class="card-header">
+                <h3 class="card-title">Speed</h3>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="kmph"></label>
+                  <div class="input-group mt-2">
+                    <input type="number" class="form-control" id="kmph" placeholder="Enter Value Here" />
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <h5 class="mb-3">Your Result</h5>
+                  <p class="">
+                    <b>Method-01 :</b>
+                    <span id="speedOne"></span>
+                  </p>
+                  <p class="">
+                    <b>Method-02 :</b>
+                    <span id="speedTwo"></span>
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer d-grid">
+                <button onclick="convertSix()" class="btn btn-outline-primary" >Calculate</button>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
+            <div class="card mt-1 mb-4">
+              <div class="card-header">
+                <h3 class="card-title">Frequency</h3>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="khertz"></label>
+                  <div class="input-group mt-2">
+                    <input type="number" class="form-control" id="khertz" placeholder="Enter Value Here" />
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <h5 class="mb-3">Your Result</h5>
+                  <p class="">
+                    <b>Method-01 :</b>
+                    <span id="frequencyOne"></span>
+                  </p>
+                  <p class="">
+                    <b>Method-02 :</b>
+                    <span id="frequencyTwo"></span>
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer d-grid">
+                <button onclick="convertSeven()" class="btn btn-outline-primary" >Calculate</button>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
+            <div class="card mt-1 mb-4">
+              <div class="card-header">
+                <h3 class="card-title">Volume</h3>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="liter"></label>
+                  <div class="input-group mt-2">
+                    <input type="number" class="form-control" id="liter" placeholder="Enter Value Here" />
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <h5 class="mb-3">Your Result</h5>
+                  <p class="">
+                    <b>Method-01 :</b>
+                    <span id="volumeOne"></span>
+                  </p>
+                  <p class="">
+                    <b>Method-02 :</b>
+                    <span id="volumeTwo"></span>
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer d-grid">
+                <button onclick="convertEight()" class="btn btn-outline-primary" >Calculate</button>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
+            <div class="card mt-1 mb-4">
+              <div class="card-header">
+                <h3 class="card-title">Digital Storage</h3>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="kbyte"></label>
+                  <div class="input-group mt-2">
+                    <input type="number" class="form-control" id="kbyte" placeholder="Enter Value Here" />
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <h5 class="mb-3">Your Result</h5>
+                  <p class="">
+                    <b>Method-01 :</b>
+                    <span id="storageOne"></span>
+                  </p>
+                  <p class="">
+                    <b>Method-02 :</b>
+                    <span id="storageTwo"></span>
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer d-grid">
+                <button onclick="convertNine()" class="btn btn-outline-primary" >Calculate</button>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
+            <div class="card mt-1 mb-4">
+              <div class="card-header">
+                <h3 class="card-title">Currency</h3>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="dollar"></label>
+                  <div class="input-group mt-2">
+                    <input type="number" class="form-control" id="dollar" placeholder="Enter Value Here" />
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <h5 class="mb-3">Your Result</h5>
+                  <p class="">
+                    <b>Method-01 :</b>
+                    <span id="currencyOne"></span>
+                  </p>
+                  <p class="">
+                    <b>Method-02 :</b>
+                    <span id="currencyTwo"></span>
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer d-grid">
+                <button onclick="convertTen()" class="btn btn-outline-primary" >Calculate</button>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
+            <div class="card mt-1 mb-4">
+              <div class="card-header">
+                <h3 class="card-title">Crypto Currency</h3>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="bitcoin"></label>
+                  <div class="input-group mt-2">
+                    <input type="number" class="form-control" id="bitcoin" placeholder="Enter Value Here" />
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <h5 class="mb-3">Your Result</h5>
+                  <p class="">
+                    <b>Method-01 :</b>
+                    <span id="cryptoOne"></span>
+                  </p>
+                  <p class="">
+                    <b>Method-02 :</b>
+                    <span id="cryptoTwo"></span>
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer d-grid">
+                <button onclick="convertEleven()" class="btn btn-outline-primary" >Calculate</button>
+              </div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Font Awesome JS -->
+    <script src="./plugins/font-awesome/js/all.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="./plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <!-- <script src="./assets/js/scripts.js"></script> -->
+    <script>
+      // var t = Number(prompt("Tempareture"));
+      // document.write(t + " Fahrenheit = " + ((t - 32)*(5/9)).toFixed(2) + " Celsius");
+      function convertOne() {
+        let fahrenheit = document.querySelector("#fahrenheit").value;
+        var celsius = (fahrenheit - 32)*(5/9);
+        var kelvin = (fahrenheit - 32)*(5/9) + 273.15;
+        document.querySelector("#tempOne").innerHTML = fahrenheit + "°F = " + celsius.toFixed(2) + "°C";
+        document.querySelector("#tempTwo").innerHTML = fahrenheit + "°F = " + kelvin.toFixed(2) + "K";
+      };
+      
+      function convertTwo() {
+        let km = document.querySelector("#kilometer").value;
+        var mile = km / 1.609;
+        var meter = km * 1000;
+        document.querySelector("#lengthOne1").innerHTML = km + "Km = " + mile.toFixed(2) + "Mi";
+        document.querySelector("#lengthOne2").innerHTML = km + "Km = " + meter.toFixed(2) + "M";
+      };
+
+      function convertThree() {
+        let yard = document.querySelector("#yard").value;
+        var meter = yard / 1.094;
+        var foot = yard * 3;
+        document.querySelector("#lengthTwo1").innerHTML = yard + "Yd =" + meter.toFixed(2) + "M";
+        document.querySelector("#lengthTwo2").innerHTML = yard + "Yd =" + foot.toFixed(2) + "Ft";
+      };
+
+      function convertFour() {
+        let foot = document.querySelector("#foot").value;
+        var inch = foot * 12;
+        var cm = foot * 30.48;
+        document.querySelector("#lengthThree1").innerHTML = foot + "Ft = " + inch.toFixed(2) + "In";
+        document.querySelector("#lengthThree2").innerHTML = foot + "Ft = " + cm.toFixed(2) + "CM";
+      };
+
+      function convertFive() {
+        let kg = document.querySelector("#kilogram").value;
+        var gram = kg * 1000;
+        var pound = kg * 2.205;
+        document.querySelector("#massOne").innerHTML = kg + "Kg = " + gram.toFixed(2) + "G";
+        document.querySelector("#massTwo").innerHTML = kg + "Kg = " + pound.toFixed(2) + "LB";
+      };
+
+      function convertSix() {
+        let kmph = document.querySelector("#kmph").value;
+        var miph = kmph / 1.609;
+        var mps = kmph / 3.6;
+        document.querySelector("#speedOne").innerHTML = kmph + "Kmph = " + miph.toFixed(2) + " Miph";
+        document.querySelector("#speedTwo").innerHTML = kmph + "Kmph = " + mps.toFixed(2) + " Mps";
+      };
+
+      function convertSeven() {
+        let khz = document.querySelector("#khertz").value;
+        var mhz = khz / 1000;
+        var hz = khz * 1000;
+        document.querySelector("#frequencyOne").innerHTML = khz + "KHz = " + mhz.toFixed(4) + "MHz";
+        document.querySelector("#frequencyTwo").innerHTML = khz + "KHz = " + hz.toFixed(4) + "Hz";
+      };
+
+      function convertEight() {
+        let liter = document.querySelector("#liter").value;
+        var ml = liter * 1000;
+        var cbm = liter / 1000;
+        document.querySelector("#volumeOne").innerHTML = liter + "L = " + ml.toFixed(2) + "ML";
+        document.querySelector("#volumeTwo").innerHTML = liter + "L = " + cbm.toFixed(2) + " Cubic Meter";
+      };
+
+      function convertNine() {
+        let kbyte = document.querySelector("#kbyte").value;
+        var mbyte = kbyte / 1000;
+        var byte = kbyte * 1000;
+        document.querySelector("#storageOne").innerHTML = kbyte + "KB = " + mbyte.toFixed(4) + "MB";
+        document.querySelector("#storageTwo").innerHTML = kbyte + "KB = " + byte.toFixed(4) + "Byte";
+      };
+
+      function convertTen() {
+        let dollar = document.querySelector("#dollar").value;
+        var pound = dollar / 1.2227;
+        var taka = dollar * 107.54;
+        document.querySelector("#currencyOne").innerHTML = dollar + " USD = " + pound.toFixed(2) + " GBP";
+        document.querySelector("#currencyTwo").innerHTML = dollar + " USD = " + taka.toFixed(2) + " BDT";
+      }
+
+      function convertEleven() {
+        let bitcoin = document.querySelector("#bitcoin").value;
+        var usd = bitcoin * 26918.00;
+        var bdt = bitcoin * 2884548.10;
+        document.querySelector("#cryptoOne").innerHTML = bitcoin + " BTC = " + usd.toFixed(2) + " USD";
+        document.querySelector("#cryptoTwo").innerHTML = bitcoin + " BTC = " + bdt.toFixed(2) + " BDT";
+      };
+    </script>
+  </body>
+</html>

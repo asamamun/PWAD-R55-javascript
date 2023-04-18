@@ -1,0 +1,32 @@
+Round 53 Angular Questions
+1. What is Angular?
+ans: Angular is a popular open-source framework for building dynamic web applications using TypeScript, HTML, and CSS.
+2. What are some benefits of using Angular for web development?
+ans: Angular provides a number of benefits, including a modular architecture, robust features for data binding and manipulation, improved performance through server-side rendering, and support for building reusable UI components.
+3.What is a component in Angular?
+ans:  In Angular, a component is a reusable UI element that consists of an HTML template and a TypeScript class that defines the component's behavior and properties.
+4. What is data binding in Angular?
+ans: Data binding in Angular refers to the process of synchronizing data between the component class and the component's template.
+5. What is a directive in Angular?
+ans: A directive in Angular is a class that can modify the behavior or appearance of an existing DOM element or create a new custom element.
+6. What is the Angular CLI?
+ans: The Angular CLI (Command Line Interface) is a tool that helps developers create, manage, and deploy Angular applications more easily by automating common development tasks.
+7.What are the key features of Angular?
+ans: Angular provides a powerful component architecture for building reusable UI elements, data binding for updating the view based on changes to the model, dependency injection for managing application services, and a router for managing navigation between different views in a single-page application.
+8. What are Dircetives in Angular?
+ans: A directive in Angular is a class that modifies the behavior or appearance of a DOM element. There are three types of directives in Angular: component directives, attribute directives, and structural directives
+1. Component Directives
+2. Structural Directives
+3. Attritbute Directives
+9. What is a template in Angular?
+ans: A template in Angular is a section of HTML code that defines the user interface of a component. Templates can include data bindings, event bindings, and other Angular directives and components.
+10. What is data binding in Angular?
+ans: Data binding in Angular is a mechanism for connecting data in a component to the HTML template, and for updating the template automatically when the data changes. There are several types of data binding in Angular, including one-way, two-way, and event binding.
+11.What is a route in Angular?
+Ans: A route is a mechanism in Angular that allows you to map URLs to specific components in your application. The Angular router is used to configure and manage routes in an Angular application.
+12.What is Angular Material?
+Ans: Angular Material is a UI component library for Angular that provides pre-built UI components and styles for building responsive, accessible, and mobile-friendly web applications.
+13.What is NgModule in Angular?
+Ans: NgModule is used to configure and organize an Angular application.
+
+

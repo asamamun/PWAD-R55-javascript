@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="clock">11:29:00 AM</h1>
+    <script>
+        function addzero(n){
+            return n.padStart(2, '0');
+        }
+        let sc = function() {
+            //console.log(Math.random())
+            // console.log(Date.now())
+            let d = new Date();
+            document.querySelector('#clock').innerHTML = 
+                d.getFullYear() + '-' + 
+                (d.getMonth() + 1) + '-' + 
+                d.getDate() + ' ' +
+                d.getHours() + ':' +
+                d.getMinutes() + ':' +
+                d.getSeconds() + ':' +
+                d.getMilliseconds()
+                ;
+        }
+        setInterval(sc,1);
+
+//         const str1 = '15';
+
+// console.log(str1.padStart(2, '0'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="mcq" placeholder="mcq marks">
+    <input type="text" id="desc" placeholder="descriptive marks">
+    <input type="text" id="ev" placeholder="evidence marks">
+    <button onclick="calc()">Calculate</button>
+    <hr>
+    <h1 id="result"></h1>
+    <script>
+        function calc(){
+            let r = "";
+            let m = document.getElementById("mcq").value;
+            let d = document.getElementById("desc").value;
+            let ev = document.getElementById("ev").value;
+            if(m >= 80 && d >= 60 && ev >= 60){
+                r= "You have passed"
+            }
+            else{
+                r = "You have failed";
+            }
+            document.getElementById("result").innerHTML = r;
+        }
+    </script>
+</body>
+</html>

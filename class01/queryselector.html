@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+            <div class="row">
+                <div class="col-5">
+                    Farenhite
+                    <input type="text" id="f" placeholder="fatenhite value">
+                </div>
+                <div class="col-2">
+                    <input class="btn btn-outline-info" type="button" value="Calculate" onclick="convert()">
+                </div>
+                <div class="col-5">
+                    Celcius
+                    <input type="text" id="c" placeholder="celcius value">
+                </div>
+            </div>
+        </form>
+        <h3 id="desc"></h3>
+    </div>
+    <script>
+        function convert(){
+            //console.log(5);
+            let f = Number(document.querySelector("#f").value);
+            let c = (f-32)*(5/9);
+            document.querySelector("#c").value = c.toFixed(4);
+            document.querySelector("#desc").innerHTML = f + " degree farenhite = " + c.toFixed(4) + " degree celcius";
+            //console.log(f);
+        }
+
+    </script>
+
+</body>
+
+</html>

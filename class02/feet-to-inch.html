@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feet-to-inch</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center m-2 p-2 bg-info border border-success rounded">feet to inch converter</h1>
+        <form action="">
+            <div class="row">
+                <div class="col-5">
+                    feet
+                    <input type="text" placeholder="Enter feet" id="ft" onkeyup="ftoi(this.value)">
+                </div>
+                <div class="col-2">
+                    <input type="button" class="btn btn-outline-info" value="convert now" onclick="forinch()">
+                </div>
+                <div class="col-5">
+                    inch
+                    <input type="text" placeholder="inch" id="in" onchange="itof(this.value)">
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <script>
+        function ftoi(v){
+            document.querySelector("#in").value = v*12;
+        }
+        function itof(t){
+            document.querySelector("#ft").value = t/12;
+        }
+        function forinch(){
+            let f = Number(document.querySelector("#ft").value);
+            let i = f*12;
+            document.querySelector("#in").value = i;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body>
+    <table class="table table-hover table-responsive">
+        <tr>
+            <th>Serial</th>
+            <th>=</th>
+            <th>Result</th>
+        </tr>
+        
+        <tbody id="dc"></tbody>
+    </table>
+    <script>
+        let n = prompt("Enter Dharapat number",4);
+        let limit = prompt("Limit number",10);
+        let d = '';
+        for (let index = 1; index <= limit; index++) {
+            //document.write(index*n + " ");  
+            d += `
+            <tr>
+            <td>${index} X ${n} </td>
+            <td>=</td>
+            <td>${index*n}</td>
+            </tr>
+            `;           
+        }
+        document.querySelector("#dc").innerHTML = d;
+    </script>
+</body>
+</html>

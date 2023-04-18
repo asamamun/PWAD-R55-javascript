@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mile-to-kilometer</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center m-2 p-2 bg-info border border-success rounded">mile to kilometer converter</h1>
+        <form action="">
+            <div class="row">
+                <div class="col-5">
+                    mile
+                    <input type="text" id="ml" placeholder="mile value">
+                </div>
+                <div class="col-2">
+                    <input type="button" class="btn btn-outline-info" value="convert now" onclick="forkm()">
+                </div>
+                <div class="col-5">
+                    Kilo meter
+                    <input type="text" id="km" placeholder="km value">
+                </div>
+            </div>
+        </form>
+    </div>
+  
+    <script>
+        function forkm(){
+            let m = Number(document.querySelector("#ml").value);
+            let k = m*1.60934;
+            document.querySelector("#km").value = k;
+        }
+    </script>
+    
+</body>
+</html>
